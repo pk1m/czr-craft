@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+# React Craft Coding Exercise
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+### Task:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Your task is to build a simplified sportsbook application. You will integrate three mock APIs:
+1. **Games API** – Provides a list of games and their selectable players for wagering.
+2. **Scores Streaming API** – Streams real-time game scores.
+3. **Odds Streaming API** – Streams real-time odds for each selection.
+    
+Using these APIs, develop a simple app that displays all available games along with their dynamically updating scores and their selections with dynamically updated odds. The app should allow users to click on a selection to add it to the betslip. Users should also be able to remove selections from the betslip and return them to the game list.
 
-## Expanding the ESLint configuration
+###  Acceptance Criteria:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Display games and their scores and selections**
+- The app gets the list of games from the Games API
+- For each game, display the game name and the sport.
+- For each game, display the current score dynamically updated from the Scores Streaming API
+- For each game, display each of the selections by name and with their odds dynamically updated from the Odds Streaming API
+    
+**Add selection to betslip**
+- User can click on a selection from a game which adds the selection to the betslip and removes it from the game.
+- The selection in the betslip should display the name and their odds dynamically updated from the Odds Streaming API.
+- User can add multiple selections to the betslip
 
-- Configure the top-level `parserOptions` property like this:
+**Remove selection from betslip**
+- User can click on a selection in the betslip which removes it from betslip and returns it to the game it was added from.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+###  Things to consider:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Code readability & maintainability
+- Performance & Efficiency
+- Correctness & Completeness
+- Testability
+- Enhancement & Optimization when requested
