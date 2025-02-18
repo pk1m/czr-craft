@@ -34,3 +34,7 @@ Using these APIs, develop a simple app that displays all available games along w
 - Correctness & Completeness
 - Testability
 - Enhancement & Optimization when requested
+
+
+
+![CleanShot 2025-02-18 at 15 01 33](https://github.com/user-attachments/assets/5b4418b2-fbcf-47a6-bae2-61e587e90169)
