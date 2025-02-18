@@ -1,5 +1,6 @@
 # React Craft Coding Exercise
 
+Pre-req `node >= 20.14.0`
 
 ### Task:
 
